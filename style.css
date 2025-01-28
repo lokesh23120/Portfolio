@@ -1,0 +1,109 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 20px;
+}
+
+/* Primary Gradient Background */
+.first {
+    background: linear-gradient(135deg, rgb(22, 205, 205), rgb(0, 123, 255));
+    background-color: rgb(22, 205, 205); /* Fallback color for older browsers */
+    padding: 40px 20px; /* Added more padding for spacing */
+}
+
+/* Text Color */
+.color {
+    color: rgb(25, 222, 156);
+}
+
+/* Container Padding */
+.container {
+    padding: 0 20px;
+}
+
+/* Hero Section - About Me */
+.first .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+}
+
+.first .container .row .col-lg-6 {
+    text-align: left; /* Ensures left alignment of the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  /* Align text left for larger screens */
+    margin-bottom: 20px;
+}
+
+.first .container .row .col-lg-6 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;  /* Optional: makes image circular */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first .container .row .col-lg-6 h1 {
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.first .container .row .col-lg-6 p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Make sure the text remains aligned in the center for smaller devices */
+@media (max-width: 768px) {
+    .first .container .row {
+        flex-direction: column;  /* Stack vertically on smaller screens */
+        text-align: center;
+    }
+
+    .first .container .row .col-lg-6 {
+        align-items: center; /* Center the text */
+        margin-bottom: 20px;
+    }
+
+    .first .container .row .col-lg-6 h1 {
+        font-size: 1.75rem; /* Adjust heading size on smaller screens */
+    }
+
+    .first .container .row .col-lg-6 p {
+        font-size: 1rem;  /* Adjust paragraph size */
+    }
+
+    .first .container .row .col-lg-6 img {
+        width: 80%;  /* Adjust image size */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .first .container .row .col-lg-6 h1 {
+        font-size: 1.5rem;  /* Adjust heading size further */
+    }
+
+    .first .container .row .col-lg-6 p {
+        font-size: 0.95rem; /* Adjust paragraph size */
+    }
+
+    .first .container .row .col-lg-6 img {
+        width: 70%;  /* Adjust image size even more for very small screens */
+    }
+}
